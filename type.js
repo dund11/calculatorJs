@@ -1,39 +1,35 @@
-const add = function(num1, num2){
-    return num1 + num2;
+const add = function (a,b) {
+    return a + b;
 };
 
-const subtract = function(num1, num2){
-    return num1 - num2;
+const subtract = function (a,b) {
+    return a - b;
 };
 
-const sum = function(array) {
-    let total = 0;
-    for (let i = 0; i < array.length; i++) {
-        total += array[i];
-    }
-    return total;
+const multiply = function (a,b) {
+    return a * b;
 };
 
-const multiply = function(arr) {
-    let total = 1;
-    for (let i =0; i < arr.length; i++) {
-        total *= arr[i];
-    }
-    return total;
+const divide = function (a,b) {
+    return a / b;
 };
 
-const power = function(base, exponent) {
-    return (base ** exponent);
-};
-
-const factorial = function(n) {
-    let total = 1;
-    for (let i = n; i >= 1; i--) {
-        total *= i;
-    }
-    return total;
-};
-
-module.exports = {
-    add
+const operate = function (operator, number1, number2){
+    switch (operator) {
+        case "+":
+            return add(number1, number2);
+        case "-":
+            return subtract(number1, number2);
+        case "*":
+            return multiply(number1, number2);
+        case "/":
+            return divide(number1, number2);
+        default:
+            return "Invalid operator";}
+        
 }
+console.log(operate("+",10, 5)); 
+console.log(operate("-",10, 5));
+console.log(operate("*",10, 5));
+console.log(operate("/",10, 5));
+console.log(operate("%",10, 5));
