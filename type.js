@@ -25,11 +25,10 @@ const operate = function (operator, number1, number2){
         case "/":
             return divide(number1, number2);
         default:
-            return "Invalid operator";}
-        
-}
-console.log(operate("+",10, 5)); 
-console.log(operate("-",10, 5));
-console.log(operate("*",10, 5));
-console.log(operate("/",10, 5));
-console.log(operate("%",10, 5));
+            return "Invalid operator";
+        }
+};
+
+    const display = document.querySelector(".display");
+
+    console.log(display);
